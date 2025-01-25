@@ -22,7 +22,7 @@ model invoices {
   amount      Int
   status      String    @db.VarChar(255)
   date        DateTime  @db.Date
-  customer    customers @relation(fields: [customer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_customer")
+  customer   customers @relation(fields: [customer_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_customer")
 }
 
 model revenue {

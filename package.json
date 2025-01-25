@@ -4,7 +4,7 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "postinstall": "mkdir -p prisma/migrations/0_init && npx prisma migrate diff --from-empty --to-schema-datamodel prisma/schema.prisma --script > prisma/migrations/0_init/migration.sql && npx prisma migrate resolve --applied 0_init && pnpm exec prisma generate && pnpm add ./prisma/prisma-client"
+    "postinstall": "pnpm exec prisma generate && pnpm add ./prisma/prisma-client"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
