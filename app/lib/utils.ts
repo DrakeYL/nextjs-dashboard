@@ -16,6 +16,9 @@ export const formatDateToLocal = (
     day: 'numeric',
     month: 'short',
     year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
   };
   const formatter = new Intl.DateTimeFormat(locale, options);
   return formatter.format(date);
